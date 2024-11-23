@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 38-39 A1</title>
+  </head>
+
+  <body>
+    <script>
+      // You Need To Remove Spaces And Make First Letter Capital => Friday
+      // console.log(day);
+      // let day = "Friday";
+      // let day = "Saturday";
+      // let day = "Sunday";
+      // // Output => "No Appointments Available"
+      // let day = "Monday";
+      // let day = "Thursday";
+      // // Output => "From 10:00 AM To 5:00 PM"
+      // let day = "Tuesday";
+      // // Output => "From 10:00 AM To 6:00 PM"
+      // let day = "Wednesday";
+      // // Output => "From 10:00 AM To 7:00 PM"
+      // let day = "World";
+      // // Output => "Its Not A Valid Day"
+
+      let day = "   Tuesday  ";
+      day = day.trim();
+      day = day.charAt(0).toUpperCase() + day.slice(1);
+      switch (day) {
+        case "Friday":
+        case "Saturday":
+        case "Sunday":
+          console.log(`${day} No Appointments Available`);
+          break;
+        case "Monday":
+        case "Thursday":
+          console.log(`${day} From 10:00 AM To 5:00 PM`);
+          break;
+        case "Tuesday":
+          console.log(`${day} From 10:00 AM To 6:00 PM`);
+          break;
+        case "Wednesday":
+          console.log(`${day} From 10:00 AM To 7:00 PM`);
+          break;
+        default:
+          console.log(`${day} Its Not A Valid Day`);
+          break;
+      }
+      // ======================= convert to if ==============================
+
+      if (day === "Friday" || day === "Saturday" || day === "Sunday") {
+        console.log(`${day} - No Appointments Available`);
+      } else if (day === "Monday" || day === "Thursday") {
+        console.log(`${day} - From 10:00 AM To 5:00 PM`);
+      } else if (day === "Tuesday") {
+        console.log(`${day} - From 10:00 AM To 6:00 PM`);
+      } else if (day === "Wednesday") {
+        console.log(`${day} - From 10:00 AM To 7:00 PM`);
+      } else {
+        console.log(`${day} - Its Not A Valid Day`);
+      }
+      // ================= convert to trenay if ===========================
+
+      day === "Friday" || day === "Saturday" || day === "Sunday"
+        ? console.log(day + " " + "No Appointments Available")
+        : day === "Monday" || day === "Thursday"
+        ? console.log(day + " " + "From 10:00 AM To 5:00 PM")
+        : day === "Tuesday"
+        ? console.log(day + " " + "From 10:00 AM To 6:00 PM")
+        : day === "Wednesday"
+        ? console.log(day + " " + "From 10:00 AM To 7:00 PM")
+        : console.log(day + " " + "Its Not A Valid Day");
+    </script>
+  </body>
+</html>

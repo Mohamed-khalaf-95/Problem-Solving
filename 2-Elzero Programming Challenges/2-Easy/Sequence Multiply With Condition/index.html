@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sequence Multiply With Condition</title>
+  </head>
+  <body>
+    <script>
+      function seq_multi(num, counts, exclude) {
+        // Your Code
+        let result = [num];
+        for (let i = 0; i < counts - 1; i++) {
+          num *= num;
+          if (num === exclude) continue;
+          result.push(num);
+        }
+        return result;
+      }
+      // Test Cases
+      console.log(seq_multi(2, 5, 256)); // [2, 4, 16, 65536]
+      console.log(seq_multi(3, 4, 6561)); // [3, 9, 81]
+    </script>
+  </body>
+</html>

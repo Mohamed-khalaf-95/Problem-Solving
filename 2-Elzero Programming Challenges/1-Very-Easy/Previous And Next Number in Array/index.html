@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous And Next Number in Array</title>
+</head>
+
+<body>
+    <script>
+        function checkNumber(num, arr) {
+            if (arr.includes(num + 1) && arr.includes(num - 1)) {
+                return `${true} => ${num - 1} | ${num} | ${num + 1}`
+            } else {
+                return `False`
+            }
+        }
+        arrayofnumbers = [1, 2, 4, 10, 20, 12];
+        
+        console.log(checkNumber(11, arrayofnumbers)) // True => "10 | 11 | 12"
+        console.log(checkNumber(3, arrayofnumbers)); // True => "2 | 3 | 4"
+        console.log(checkNumber(5, arrayofnumbers)); // False
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Manipulation</title>
+  </head>
+  <body>
+    <script>
+      let a = "Elzero Web School";
+      //1- Include This Method In Your Solution [slice, charAt]
+      console.log(a.charAt(2).toUpperCase() + a.slice(3, 6)); // Zero
+      //2- 8 H
+      console.log(a.charAt(a.indexOf("h")).toUpperCase().repeat(8)); // HHHHHHHH
+      console.log(a.substr(-4, 1).toUpperCase().repeat(8)); // HHHHHHHH
+      console.log(a.slice(-4, -3).toUpperCase().repeat(8)); // HHHHHHHH
+      console.log(a.substring(13, 14).toUpperCase().repeat(8)); // HHHHHHHH
+      //3- Return Array
+      console.log(a.slice(0, 6).split()); // ["Elzero"]
+      console.log(a.split(" ")[0].split()); // ["Elzero"]
+      console.log(a.split(" ", 1)); // ["Elzero"]
+      //4- Use Only "substr" Method + Template Literals In Your Solution
+      console.log(`${a.substr(0, 6)}${a.trim().substr(10)}`); // Elzero School
+      //5- Solution Must Be Dynamic Because String May Changes
+      console.log(
+        a.charAt(0).toLowerCase() +
+          a.substring(1, a.length - 1).toUpperCase() +
+          a.charAt(a.length - 1).toLowerCase()
+      ); // eLZERO WEB SCHOOl
+    </script>
+  </body>
+</html>

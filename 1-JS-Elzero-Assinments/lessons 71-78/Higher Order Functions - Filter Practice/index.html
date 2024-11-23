@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Functions - Filter Practice</title>
+  </head>
+  <body>
+    <script>
+      /*
+  Filter
+  - Filter Longest Word By Number
+*/
+
+      // Filter Words More Than 4 Characters
+      let sentence = "I Love Foood Code Too Playing Much";
+      let sentenceFil = sentence
+        .split(" ")
+        .filter((el) => el.length <= 4)
+        .join(" ");
+      console.log(sentenceFil);
+      // Ignore Numbers
+      let ignoreNumbers = "Elz123er4o";
+      let ign = ignoreNumbers
+        .split("")
+        .filter((el) => !isNaN(parseInt(el)))
+        .map((el) => +el + +el)
+        .join(" ");
+      console.log(ign);
+      // Filter Strings + Multiply
+      let mix = "A13BS2ZX";
+      let mixFilter = mix
+        .split("")
+        .filter((el) => !isNaN(parseInt(el)))
+        .map((el) => el * el)
+        .join(" ");
+
+      console.log(mixFilter);
+    </script>
+  </body>
+</html>

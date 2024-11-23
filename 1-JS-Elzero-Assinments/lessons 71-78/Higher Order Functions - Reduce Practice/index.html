@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Functions - Reduce Practice</title>
+  </head>
+  <body>
+    <script>
+      /*
+  Reduce
+  - Longest Word
+  - Remove Characters + Use Reduce
+*/
+
+      let theBiggest = [
+        "Bla",
+        "Propaganda",
+        "Other",
+        "AAA",
+        "Battery",
+        "Test",
+        "Propaganda_Two",
+      ];
+
+      let check = theBiggest.reduce((acc, el) => (acc.length > el ? acc : el));
+
+      console.log(check);
+
+      let removeChars = ["E", "@", "@", "L", "Z", "@", "@", "E", "R", "@", "O"];
+
+      let finalString = removeChars
+        .filter((el) => !el.startsWith("@"))
+        .reduce((acc, el) => `${acc}${el}`);
+
+      console.log(finalString);
+    </script>
+  </body>
+</html>

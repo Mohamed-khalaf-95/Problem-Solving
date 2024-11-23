@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 86-93 A5</title>
+  </head>
+  <body>
+    <img decoding="async" src="#" alt="One" />
+    <img decoding="async" src="#" />
+    <img decoding="async" src="#" alt="Three" />
+    <img decoding="async" src="#" />
+    <img decoding="async" src="#" />
+    <script>
+      //A5
+      let myImg = document.querySelectorAll("img");
+      for (let i = 0; i < myImg.length; i++) {
+        if (myImg[i].hasAttribute("alt")) {
+          myImg[i].alt = "old";
+        } else {
+          myImg[i].alt = "Elzero New";
+        }
+      }
+    </script>
+  </body>
+</html>

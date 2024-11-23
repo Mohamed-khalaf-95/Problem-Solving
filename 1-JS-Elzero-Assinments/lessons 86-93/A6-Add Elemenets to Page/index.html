@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 86-94 A6</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 70%;
+        margin: 20px auto;
+      }
+      form input {
+        padding: 5px 10px;
+        font-size: 17px;
+        border: 2px solid #777;
+        border-radius: 5px;
+      }
+      form select {
+        padding: 5px 10px;
+        font-size: 17px;
+        border: 2px solid #777;
+        border-radius: 5px;
+      }
+      form input[type="submit"] {
+        background-color: #009688;
+        color: #ffff;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        border: none;
+        cursor: pointer;
+      }
+      .results {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin-top: 30px;
+      }
+      .results .box {
+        background-color: #f50;
+        padding: 15px 30px;
+        color: #ffff;
+        font-size: 17px;
+        border-radius: 5px;
+        letter-spacing: 1.1px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input
+        type="number"
+        name="elements"
+        class="input"
+        placeholder="Number Of Elements"
+      />
+      <input
+        type="text"
+        name="texts"
+        class="input"
+        placeholder="Elements Text"
+      />
+
+      <select name="type" class="input">
+        <option value="Div">Div</option>
+        <option value="Section">Section</option>
+      </select>
+      <input type="submit" name="create" value="Create" />
+    </form>
+    <div class="results"></div>
+    <script>
+      let elNum = document.querySelector("[type='number']");
+      let elText = document.querySelector("[type=text]");
+      let SelectOpt = document.querySelector("select");
+      let createBtn = document.querySelector("[type=submit]");
+      let result = document.getElementsByClassName("results")[0];
+      createBtn.onclick = (e) => {
+        e.preventDefault();
+        //document.querySelectorAll(".box").forEach(el => el.remove());
+        for (let i = 0; i < elNum.value; i++) {
+          let createEle = document.createElement(SelectOpt.value);
+          let createEleText = document.createTextNode(elText.value);
+          createEle.className = "box";
+          createEle.setAttribute("title", "Element");
+          createEle.id = `id-${i + 1}`;
+          createEle.appendChild(createEleText);
+          result.appendChild(createEle);
+        }
+      };
+      // soul 2
+      // let elemInput = document.getElementsByName("elements")[0],
+      // typeInput = document.querySelector("select"),
+      // textInput = document.getElementsByName("texts")[0],
+      // divInput = document.querySelector(".results"),
+      // form = document.forms;
+
+      // form[0].onsubmit = function (event) {
+      //     event.preventDefault();
+      //    document.querySelectorAll(".box").forEach(el => el.remove());
+
+      // for (let i = 1; i <= elemInput.value; i++) {
+      //     let createType = document.createElement(typeInput.value);
+      //     let createText = document.createTextNode(textInput.value);
+
+      //     createType.className = "box";
+      //     createType.title = "Elem";
+      //     createType.id = `id-${i}`;
+
+      //     createType.appendChild(createText);
+      //     divInput.appendChild(createType);
+      //   }
+      // };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 48-53 A6</title>
+  </head>
+  <body>
+    <script>
+      let start = 0;
+      let swappedName = "elZerO";
+      let swappe = "";
+
+      for (; start < swappedName.length; start++) {
+        if (swappedName[start] === swappedName[start].toLowerCase()) {
+          swappe += swappedName[start].toUpperCase();
+        } else {
+          swappe += swappedName[start].toLowerCase();
+        }
+      }
+      console.log(swappedName);
+      console.log(swappe);
+      // Output
+      // "ELzERo"
+    </script>
+  </body>
+</html>

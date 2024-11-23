@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 86-93 A1</title>
+  </head>
+  <body>
+    <div id="elzero" class="element" name="js">JavaScript</div>
+    <script>
+      // get element by query
+      let qury1 = document.querySelector("#elzero");
+      console.log(qury1);
+      let qury2 = document.querySelector(".element");
+      console.log(qury2);
+      let qury3 = document.querySelector("[name = 'js']");
+      console.log(qury3);
+      let qury4 = document.querySelector("div");
+      console.log(qury4);
+      // get element by queryAll
+      let quryAll_1 = document.querySelectorAll("div")[0];
+      console.log(quryAll_1);
+      let quryAll_2 = document.querySelectorAll("#elzero")[0];
+      console.log(quryAll_2);
+      let quryAll_3 = document.querySelectorAll(".element")[0];
+      console.log(quryAll_3);
+      let quryAll_4 = document.querySelectorAll("[name = 'js']")[0];
+      console.log(quryAll_4);
+      // get element by id
+      let el_id = document.getElementById("elzero");
+      console.log(el_id);
+      // get element by class
+      let ele_class = document.getElementsByClassName("element")[0];
+      console.log(ele_class);
+      // get element by tag
+      let ele_tag = document.getElementsByTagName("div")[0];
+      console.log(ele_tag);
+      // get element by name
+      let ele_name = document.getElementsByName("js")[0];
+      console.log(ele_name);
+      // get element by childern
+      let ele_childern = document.body.children[0];
+      console.log(ele_childern);
+      // get element by child
+      let ele_child = document.body.childNodes[1];
+      console.log(ele_child);
+      // get element by first ele child
+      let first_ele_child = document.body.firstElementChild;
+      console.log(first_ele_child);
+    </script>
+  </body>
+</html>

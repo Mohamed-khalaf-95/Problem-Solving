@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 64-70 A2</title>
+  </head>
+  <body>
+    <script>
+      function itsMe() {
+        return `Iam A Normal Function`;
+      }
+      console.log(itsMe()); // Iam A Normal Function
+      let arrowFun = () => `Iam A Arrow Function Function`;
+      console.log(arrowFun());
+
+      function urlCreate(protocol, web, tld) {
+        return `${protocol}://www.${web}.${tld}`;
+      }
+      let urlCreateArrow = (protocol, web, tld) =>
+        `${protocol}://www.${web}.${tld}`;
+      console.log(urlCreate("https", "elzero", "org"));
+      console.log(urlCreateArrow("https", "elzero", "org"));
+      // https://www.elzero.org
+    </script>
+  </body>
+</html>

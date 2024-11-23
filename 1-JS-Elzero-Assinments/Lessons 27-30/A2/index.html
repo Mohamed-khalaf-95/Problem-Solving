@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leason 27-30 A2</title>
+</head>
+
+<body>
+    <script>
+        // first way 
+        let word = "Elzero";
+        let letterZ = "z";
+        let letterE = "e";
+        let letterO = "O";
+        // output
+        console.log(letterZ == word.charAt(2)); // True
+        console.log(letterE == word.charAt(3)); // True
+        console.log(letterO.toLowerCase() == word[5]); // True
+        // secand way 
+        let text = "Elzero";
+        let charZ = "z";
+        let charE = "e";
+        let charO = "O";
+        // output
+        console.log(text.includes(charZ)); // True
+        console.log(text.startsWith(charE.toUpperCase())); // True
+        console.log(text.endsWith(charO.toLowerCase())); // True
+
+    </script>
+</body>
+
+</html>

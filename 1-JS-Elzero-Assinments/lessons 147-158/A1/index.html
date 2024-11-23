@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lessons 147-158 A1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <script>
+    class Car {
+    constructor(name, model, price){
+        this.n = name;
+        this.m = model;
+        this.p = price;
+        this.msg = function(){
+            return `Car One Name Is ${this.n} And Model Is ${this.m} And Price Is ${this.p}`
+        }
+    }
+   run(){
+    return "Car Is Running Now"
+   }
+   stop(){
+  return "Car Is Stopped"
+   }
+  }
+  let carOne = new Car("MG",2024,12000000);
+  let carTwo = new Car("BMW",2024,8000000);
+  let carThree = new Car("ferary",2024,120000000);
+  console.log(carOne.msg());
+  console.log(carOne.run())
+  console.log(carOne.stop())
+  // Needed Output
+  
+//   "Car One Name Is MG And Model Is 2022 And Price Is 420000"
+//   "Car Is Running Now"
+
+
+  </script>
+</body>
+
+</html>

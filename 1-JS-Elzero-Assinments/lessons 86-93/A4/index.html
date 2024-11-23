@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 86-93 A4</title>
+  </head>
+  <body>
+    <div class="one" title="two">Two</div>
+    <div class="two" title="one">One</div>
+    <script>
+      let one = document.getElementsByClassName("one")[0];
+      let two = document.getElementsByClassName("two")[0];
+
+      one.setAttribute("title", one.className);
+      one.innerHTML =
+        one.className.slice(0, 1).toUpperCase() + one.className.slice(1);
+      two.setAttribute("title", two.className);
+      two.innerHTML = `${
+        two.className.slice(0, 1).toUpperCase() + two.className.slice(1)
+      } ${two.attributes.length}`;
+      // soul 2
+      // let myElements = document.querySelectorAll("div");
+      // for (let i = 0; i <= myElements.length - 1; i++) {
+      //   if (myElements[i].hasAttribute("title")) {
+      //     myElements[i].setAttribute("title", myElements[i].className);
+      //   }
+      //   if (
+      //     myElements[i].innerHTML.toUpperCase() !==
+      //     myElements[i].className.toUpperCase()
+      //   ) {
+      //     myElements[i].innerHTML =
+      //       myElements[i].className.slice(0, 1).toUpperCase() +
+      //       myElements[i].className.slice(1);
+      //     myElements[1].innerHTML =
+      //       myElements[1].textContent + " " + myElements[1].attributes.length;
+      //   }
+      // }
+    </script>
+  </body>
+</html>

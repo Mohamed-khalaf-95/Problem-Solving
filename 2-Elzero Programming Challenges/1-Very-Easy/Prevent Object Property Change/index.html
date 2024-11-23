@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Prevent Object Property Change</title>
+  </head>
+  <body>
+    <script>
+      // The Main Object
+
+      const myObject = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+
+      // Write Code Here To Prevent Changing Of Property C Value
+      if (myObject.c !== myObject.c) 
+      myObject.c = 100;
+      console.log(myObject.c); // 3
+      console.log(myObject); // 3
+    </script>
+  </body>
+</html>

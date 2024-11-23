@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 159-168 A3</title>
+    <style></style>
+  </head>
+
+  <body>
+    <script>
+    let monthArr = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let date = new Date();
+date.setDate(0);
+
+console.log(date);
+console.log(`Previous Month Is ${monthArr[date.getMonth()]} And Last Day Is ${date.getDate()}`);
+
+// Needed Output
+
+// "Sat Apr 30 2022 18:13:20 GMT+0200 (Eastern European Standard Time)"
+// "Previous Month Is April And Last Day Is 30"
+
+    </script>
+  </body>
+</html>

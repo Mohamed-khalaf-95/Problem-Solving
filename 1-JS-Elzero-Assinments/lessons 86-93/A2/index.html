@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 86-93 A2</title>
+  </head>
+  <body>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <script>
+      let myImg = document.querySelectorAll("img");
+      //loop images
+      for (let i = 0; i < myImg.length; i++) {
+        if (myImg[i].getAttribute("decoding") === "async") {
+          myImg[i].src =
+            "https://elzero.org/wp-content/themes/elzero/imgs/logo.png";
+          myImg[i].setAttribute("alt", "Elzero Logo");
+          myImg[i].style.background = "#0075ff";
+        }
+      }
+    </script>
+  </body>
+</html>

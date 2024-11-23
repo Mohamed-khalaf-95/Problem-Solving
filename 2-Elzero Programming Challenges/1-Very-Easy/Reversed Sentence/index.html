@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reversed Sentence</title>
+  </head>
+  <body>
+    <script>
+      //==================soul-1====================
+      function reverseSen(a) {
+        let revStr = a.split(" ").reverse().join(" ");
+        return revStr;
+      }
+      console.log(reverseSen("Elzero Web School"));
+
+      //==================soul-2====================
+      let myStr = "Elzero Web School".split(" ");
+      let myStrRev = "";
+      for (let i = myStr.length - 1; i >= 0; i--) {
+        myStrRev += myStr[i] + " ";
+      }
+      console.log(myStrRev);
+    </script>
+  </body>
+</html>

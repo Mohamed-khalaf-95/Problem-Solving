@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 48-53 A7</title>
+  </head>
+  <body>
+    <script>
+      let start = 0;
+      let mix = [1, 2, 3, "A", "B", "C", 4];
+      for (start = mix[start]; start < mix.length; start++) {
+        // start++
+        if (typeof mix[start] === "string") {
+          continue;
+        }
+        // secand soulition
+        // if ( mix[start] === undefined || mix[start] === null) {
+        //   break;
+        // }
+        console.log(mix[start]);
+      }
+
+      // Output
+      //2;
+      //3;
+      //4;
+    </script>
+  </body>
+</html>

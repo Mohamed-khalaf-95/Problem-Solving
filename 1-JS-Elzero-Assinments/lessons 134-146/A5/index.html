@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 134-146 A5</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <SCRipt>
+        let date1 = "25/10/1982";
+        let date2 = "25 - 10 - 1982";
+        let date3 = "25 10 1982";
+        let date4 = "25 10 82";
+
+        let re = /\d{1,2}(\/|\s-\s|\s)\d{1,2}(\/|\s-\s|\s)\d{2,4}/g; // Write Pattern Here
+
+        console.log(date1.match(re)); // "25/10/1982"
+        console.log(date2.match(re)); // "25 - 10 - 1982"
+        console.log(date3.match(re)); // "25 10 1982"
+        console.log(date4.match(re)); // "25 10 82"
+
+    </SCRipt>
+</body>
+
+</html>

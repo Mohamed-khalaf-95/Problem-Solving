@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function Challenge</title>
+  </head>
+  <body>
+    <script>
+      /*
+  Function Arrow Challenges
+*/
+
+      // [1] One Statement In Function
+      // [2] Convert To Arrow Function
+      // [3] Print The Output [Arguments May Change]
+
+      let names = function (...name) {
+        let result = "";
+        for (let i = 0; i < name.length; i++) {
+          if (typeof name[i] === "string") {
+            result += `[${name[i]}],`;
+          }
+        }
+        return `// String ${result.slice(0, length - 1)} => Done !`;
+      };
+
+      let namesArro = (...name) =>
+        (() => {
+          let result = "";
+          for (let i = 0; i < name.length; i++) {
+            result += `[${name[i]}],`;
+          }
+          return `// String ${result.slice(0, length - 1)} => Done !`;
+        })();
+
+      console.log(names("Osama", "Mohamed", "Ali", "Ibrahim", "khalaf"));
+      console.log(namesArro("Osama", "Mohamed", "Ali", "Ibrahim"));
+      //output
+      // String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+
+      /* ================================= */
+
+      // [1] Replace ??? In Return Statement To Get The Output
+      // [2] Create The Same Function With Regular Syntax
+      // [3] Use Array Inside The Arguments To Get The Output
+
+      let myNumbers = [20, 50, 10, 60];
+
+      let calc = (one, two, ...nums) => {
+        let result = +false;
+        for (let i = result; i < nums.length; i++) {
+          result += one + two + nums[i];
+        }
+        return result;
+      };
+      console.log(calc(10, myNumbers[+true], myNumbers[+false])); // 80
+
+      // [2] Create The Same Function With Regular Syntax
+      function calcRug(one, two, ...nums) {
+        let result = +false;
+        for (let i = result; i < nums.length; i++) {
+          result += one + two + nums[i];
+        }
+        return result;
+      }
+
+      console.log(calcRug(10, myNumbers[+true], myNumbers[+false])); // 80
+    </script>
+  </body>
+</html>

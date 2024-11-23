@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 64-70 A3</title>
+  </head>
+  <body>
+    <script>
+      function checker(zName) {
+        return function (status) {
+          return function (salary) {
+            return status === "Available"
+              ? `${zName}, My Salary Is ${salary}`
+              : `Iam Not Avaialble`;
+          };
+        };
+      }
+
+      let arrowChecker = (zName) => {
+        return (status) => {
+          return (salary) =>
+            status === "Availabl"
+              ? `${zName}, My Salary Is ${salary}`
+              : `Iam Not Avaialble`;
+        };
+      };
+      console.log(checker("Osama")("Available")(4000));
+      // Osama, My Salary Is 4000
+      console.log(checker("Ahmed")("Not Available")());
+      // Iam Not Avaialble
+      console.log(arrowChecker("Mohamed")("Availabl")(10000));
+      console.log(arrowChecker("khalaf")("Not Availabl")(10000));
+    </script>
+  </body>
+</html>

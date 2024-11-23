@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 86-93 A3</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      form {
+        width: 70%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      form input {
+        padding: 10px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        border: 2px solid #777;
+        border-radius: 5px;
+      }
+      form input:focus {
+        border: none;
+        outline: 2px solid #0075ff;
+      }
+      form div {
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      @media (max-width: 768px) {
+        form input {
+          padding: 5px;
+          font-size: 15px;
+        }
+        form div {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="number" name="dollar" placeholder="USD Dollar" />
+      <div class="result">
+        <span id="dollar-value">{0.00}</span> USD Dollar =
+        <span id="eg-value">{0.00}</span> Egyptian Pound
+      </div>
+    </form>
+    <script>
+      let dollarInput = document.querySelector("[name=dollar]");
+      let dollarValue = document.getElementById("dollar-value");
+      let egValue = document.getElementById("eg-value");
+
+      dollarInput.oninput = () => {
+        dollarValue.innerHTML = `{${(dollarInput.value * 1).toFixed(2)}}`;
+        egValue.innerHTML = `{${(dollarInput.value * 70).toFixed(2)}}`;
+      };
+    </script>
+  </body>
+</html>

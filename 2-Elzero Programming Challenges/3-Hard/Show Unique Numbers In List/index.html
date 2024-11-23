@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Unique Numbers In List</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [ 15.6, 2, 2, 2, 4, 5, true, true, 7, "A", 2, false, 2, 3, 8, 9];
+      function numFilter(numbers) {
+        let nums = numbers.filter((el, index, arr) => typeof el !== "string" && arr.indexOf(el) === index).map((el) => Math.trunc(el))
+          .sort((a, b) => a - b)
+          .reverse();
+        // ===========================
+        function SumNum() {
+          let newNum = [];
+          for (let i = 0; i < nums.length; i++) {
+            newNum.push(nums[0] + nums[nums.length - 1]);
+            nums.shift();
+            nums.pop();
+            if (nums.length === 2) {
+              newNum.push(nums[0] * nums[1]);
+            }
+          }
+          return newNum;
+        }
+        return `${nums.join(" ")}${"\n"}${SumNum().join(" ")}`;
+      }
+
+      console.log(numFilter(numbers));
+    </script>
+  </body>
+</html>

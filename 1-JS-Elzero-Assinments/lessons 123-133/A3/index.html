@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 123-133 A3</title>
+    <style></style>
+  </head>
+
+  <body>
+    <script>
+      let myInfo = {
+        username: "Osama",
+        role: "Admin",
+        country: "Egypt",
+      };
+      // my code
+      let myMap = new Map([
+        ["username", "osama"],
+        ["role", "Admin"],
+        ["country", "Egypt"],
+      ]);
+      console.log(myMap);
+      console.log(myMap.size);
+      console.log(myMap.has("role"));
+      // Needed Output
+      // Map(3) {'username' => 'Osama', 'role' => 'Admin', 'country' => 'Egypt'}
+      // 3
+      // true
+      let map = new Map(Object.entries(myInfo));
+      console.log(map);
+      let myMap2 = new Map();
+      myMap2.set(Object.keys(myInfo)[0], Object.values(myInfo)[0]);
+      myMap2.set(Object.keys(myInfo)[1], Object.values(myInfo)[1]);
+      myMap2.set(Object.keys(myInfo)[2], Object.values(myInfo)[2]);
+      console.log(myMap2);
+      console.log(myMap2.size);
+      console.log(myMap2.has("role"));
+    </script>
+  </body>
+</html>

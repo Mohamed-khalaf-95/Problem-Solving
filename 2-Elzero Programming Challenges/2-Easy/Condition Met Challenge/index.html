@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condition Met Challenge</title>
+  </head>
+  <body>
+    <script>
+      let st = "Elzero Web School";
+      if (
+        st.charAt(st.indexOf("W")).toLowerCase() === "w" ||
+        st.charAt(st.indexOf("w")) === "w"
+      ) {
+        console.log("Good");
+      }
+      if (typeof st.length !== "string") {
+        console.log("Good");
+      }
+      if (typeof st.length === "number") {
+        console.log("Good");
+      }
+
+      if (st.split(" ")[0].repeat(2) === "ElzeroElzero") {
+        console.log("Good");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closest Number In Array</title>
+  </head>
+  <body>
+    <script>
+      let nums = [10, 80, 85, 25, 30, 88, 15];
+      let goal = 100;
+
+      // // Your Code Here
+      let closestNum = nums[0];
+      for (let i = 0; i < nums.length; i++) {
+        if (Math.abs(goal - nums[i]) < Math.abs(goal - closestNum)) {
+          closestNum = nums[i];
+        }
+      }
+      console.log(closestNum);
+      //output
+      // Closest Number Is 88
+
+      // soul 2
+      function closest(num, arr) {
+        return arr.reduce((prev, curr) =>
+          Math.abs(curr - num) < Math.abs(prev - num) ? curr : prev
+        );
+      }
+
+      console.log(closest(20, nums));
+      //output
+      // Closest Number Is 25
+    </script>
+  </body>
+</html>

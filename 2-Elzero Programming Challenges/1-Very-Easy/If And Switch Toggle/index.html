@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If And Switch Toggle</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let job = "Manager";
+      let salary = 0;
+      let jobS = "Developer";
+      let salaryS = 0;
+
+      if (job === "Manager") {
+        salary = 8000;
+      } else if (job === "IT" || job === "Support") {
+        salary = 6000;
+      } else if (job === "Developer" || job === "Designer") {
+        salary = 7000;
+      } else {
+        salary = 4000;
+      }
+      //====== IF To Switch Soul
+      switch (jobS) {
+        case "Manager":
+          salaryS = 8000;
+          break;
+        case "IT":
+        case "Support":
+          salaryS = 6000;
+          break;
+        case "Developer":
+        case "Designer":
+          salaryS = 7000;
+          break;
+        default:
+          salaryS = 4000;
+          break;
+      }
+      console.log(`${job} ${salary}`);
+      console.log("Result" + "-".repeat(20));
+      console.log(`${jobS} ${salaryS}`);
+
+      //======End IF To Switch Soul
+      let holidays = 0;
+      let money = 0;
+      //=============================================
+      console.log("Switch To IF" + "=".repeat(20));
+      switch (holidays) {
+        case 0:
+          money = 5000;
+          console.log(`My Money is ${money}`);
+          break;
+        case 1:
+        case 2:
+          money = 3000;
+          console.log(`My Money is ${money}`);
+          break;
+        case 3:
+          money = 2000;
+          console.log(`My Money is ${money}`);
+          break;
+        case 4:
+          money = 1000;
+          console.log(`My Money is ${money}`);
+          break;
+        case 5:
+          money = 0;
+          console.log(`My Money is ${money}`);
+          break;
+        default:
+          money = 0;
+          console.log(`My Money is ${money}`);
+      }
+
+      //======Switch To IF Soul
+      console.log("Result" + "-".repeat(20));
+      let holidaysIF = 5;
+      let moneyIF = 0;
+
+      if (holidaysIF === 0) {
+        moneyIF = 5000;
+      } else if (holidaysIF === 1 || holidaysIF === 2) {
+        moneyIF = 3000;
+      } else if (holidaysIF === 3) {
+        moneyIF = 2000;
+      } else if (holidaysIF === 4) {
+        moneyIF = 1000;
+      } else {
+        moneyIF = 0;
+      }
+
+      console.log(`My Money is ${moneyIF}`);
+      //======End Switch To IF Soul
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function-Training</title>
+  </head>
+  <body>
+    <script>
+      // user info function=============================
+      function userInfo(us = "un", ag = "un", rt = 0, show = "Yes", ...skills) {
+        document.write(`<div>`);
+        document.write(`<h2>Welcome At - ${us} - Profile</h2>`);
+        document.write(`<h2>Age : ${ag}</h2>`);
+        document.write(`<h2>Hour Rate : ${rt}$</h2>`);
+        if (show === "Yes") {
+          if (skills.length > 0) {
+            document.write(`<h2>Skills :</h2>`);
+            for (i = 0; i < skills.length; i++) {
+              document.write(`<h2>-- ${skills[i]}</h2>`.toUpperCase());
+            }
+          } else {
+            document.write(`<h2>No Skills</h2>`);
+          }
+        } else {
+          document.write(`<h2>Hiden Skills</h2>`);
+        }
+
+        document.write(`</div>`);
+      }
+      userInfo("Mohamed Khalaf", 28, 50, "Yes", "html", "CSS", "JS");
+
+      // =============================================================================
+      /*
+              Function - Random Argument Challenge
+              ====================================
+              Create Function showDetails
+              Function Accept 3 Parameters [a, b, c]
+              Data Types For Info Is
+              - String => Name
+              - Number => Age
+              - Boolean => Status
+              Argument Is Random
+              Data Is Not Sorted Output Depend On Data Types
+              - Use Ternary Conditional Operator
+            */
+      function showDetails(a, b, c) {
+        let str, num, bool;
+
+        // if (typeof a === "string") {
+        //   str = a;
+        // } else if (typeof b === "string") {
+        //   str = b;
+        // } else if (typeof c === "string") {
+        //   str = c;
+        // }
+        // if (typeof a === "number") {
+        //   num = a;
+        // } else if (typeof b === "number") {
+        //   num = b;
+        // } else if (typeof c === "number") {
+        //   num = c;
+        // }
+        // if (typeof a === "boolean") {
+        //   bool = a;
+        // } else if (typeof b === "boolean") {
+        //   bool = b;
+        // } else if (typeof c === "boolean") {
+        //   bool = c;
+        // }
+        typeof a === "string"
+          ? (str = a)
+          : typeof b === "string"
+          ? (str = b)
+          : (str = c);
+        typeof a === "number"
+          ? (num = a)
+          : typeof b === "number"
+          ? (num = b)
+          : (num = c);
+        typeof a === "boolean"
+          ? (bool = a)
+          : typeof b === "number"
+          ? (bool = b)
+          : (bool = c);
+
+        console.log(`${str} ${num} ${bool}`);
+      }
+
+      showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+      showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+      showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+      showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+    </script>
+  </body>
+</html>

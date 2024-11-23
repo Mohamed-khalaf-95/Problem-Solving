@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallest Number In Mixed List</title>
+</head>
+
+<body>
+    <script>
+        let arr = [115, 20, 10, "A", "!", "@", 13, 1, 5, 2, "X", "C", .5];
+        let newArr = arr
+            .filter((el) => !isNaN(parseInt(el)))
+            .reduce((acc, el) => acc < el ? acc : el)
+        console.log(newArr)
+
+// soul 2=================================================
+function min_number(num) {
+    let newArr = num.filter((el) => !isNaN(parseFloat(el)))
+    let minNum = newArr[0];
+    for (let i = 0; i < newArr.length; i++) {
+        if (minNum > newArr[i]) {
+            minNum = newArr[i];
+        }
+    }
+    return minNum
+}
+console.log(min_number([115, 20, 10, "A", "!", "@", 13, 1, 5, 2, "X", "C"]))
+// soul 3=================================================
+function smallestNum(num){
+ let newArr = num.filter((el) => !isNaN(parseFloat(el)))
+  let smallest =  Math.min(...newArr)
+return smallest
+}
+console.log(smallestNum([115, 20, 10, "A", "!", "@", 13, 1, 5, 2, "X", "C",0]))
+    </script>
+</body>
+
+</html>

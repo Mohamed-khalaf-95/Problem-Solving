@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Functions - Map Practice</title>
+  </head>
+  <body>
+    <script>
+      /*
+  Map
+  - Swap Cases
+  - Inverted Numbers
+  - Ignore Numbers Value
+*/
+
+      let swappingCases = "elZERo";
+      let invertedNumbers = [1, -10, -20, 15, 100, -30];
+      let ignoreNumbers = "Elz123er4o";
+      //================let swappingCases = "elZERo";================================
+      let sw = swappingCases
+        .split("")
+        .map(function (a) {
+          return a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase();
+        })
+        .join("");
+      console.log(sw);
+      //====================Arrow=======================
+      let swArrow = swappingCases
+        .split("")
+        .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
+        .join("");
+      console.log(`Arrow Fun Result [${swArrow}]`);
+      //================invertedNumbers = [1, -10, -20, 15, 100, -30];===============
+      let inv = invertedNumbers.map(function (a) {
+        return -a;
+      });
+      console.log(inv);
+      //=====================Arrow=========================
+      let invArrow = invertedNumbers.map((a) => -a);
+      console.log(`Arrow Fun Result ${invArrow}`);
+      //=================ignoreNumbers = "Elz123er4o";===============================
+      let ign = ignoreNumbers
+        .split("")
+        .map(function (a) {
+          return isNaN(parseInt(a)) ? a : "";
+        })
+        .join("");
+      console.log(ign);
+      //=====================Arrow===========================
+      let ignArrow = ignoreNumbers
+        .split("")
+        .map((a) => (isNaN(parseInt(a)) ? a : ""))
+        .join("");
+      console.log(`Arrow Fun Result ${ignArrow}`);
+    </script>
+  </body>
+</html>

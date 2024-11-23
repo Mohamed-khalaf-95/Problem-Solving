@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Longest Word</title>
+  </head>
+  <body>
+    <script>
+      function longest_word_in(sentence) {
+        return sentence
+          .split(" ")
+          .reduce((acc, c) => (acc.length > c.length ? acc : c));
+      }
+
+      //# Testing Ouput
+      console.log(
+        longest_word_in(
+          "In Programming We Love Elzero Academy Tooooooooooo Much"
+        )
+      );
+      // # Tooooooooooo
+      // ====================soul 2
+      function longest_word_in_two(sentence) {
+        sentence = sentence.split(" ");
+        let result = "";
+        for (let i = 0; i < sentence.length - 1; i++) {
+          if (sentence[i].length > sentence[i + 1].length) {
+            result = sentence[i];
+          }
+        }
+        return result;
+      }
+
+      //# Testing Ouput
+      console.log(
+        longest_word_in_two(
+          "In Programming We Love Elzero Academy Tooooooooooo Much"
+        )
+      );
+      // # Tooooooooooo
+    </script>
+  </body>
+</html>

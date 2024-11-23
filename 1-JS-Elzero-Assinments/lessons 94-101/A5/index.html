@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lesson 94-101 A5</title>
+</head>
+
+<body>
+  <div>Element</div>
+  <span>Element</span>
+  <p>Element</p>
+  <article>Element</article>
+  <section>Element</section>
+  <script>
+    document.addEventListener("click", function (e) {
+      for (let i = 0; i < document.body.children.length; i++) {
+        if (e.target === document.body.children[i]) {
+          e = `This Is => ${e.target.tagName.toLowerCase()}-Tag`
+          console.log(e)
+        }
+      }
+    }); 
+    // soul 2
+    document.addEventListener("click", function (e) {
+      for (let i = 0; i < document.body.children.length; i++) {
+        if (e.target === document.body.children[i]) {
+          e = `This Is => ${e.target.localName}-Tag`
+          console.log(e)
+        }
+      }
+    }); 
+  </script>
+</body>
+
+</html>

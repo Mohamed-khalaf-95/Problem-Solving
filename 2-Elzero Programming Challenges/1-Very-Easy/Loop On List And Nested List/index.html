@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop On List And Nested List</title>
+  </head>
+  <body>
+    <script>
+      // # Input
+      let my_skills = [
+        "HTML",
+        20,
+        "JS",
+        "Python",
+        ["Flask", "Django"],
+        "MySQL",
+        10,
+      ];
+      for (let i = 0; i < my_skills.length; i++) {
+        if (typeof my_skills[i] === "number") {
+          continue;
+        }
+        if (!Array.isArray(my_skills[i])) {
+          console.log(`-${my_skills[i]}`);
+        }
+        for (let j = 0; j < my_skills[i].length; j++) {
+          if (Array.isArray(my_skills[i])) {
+            console.log(`---${my_skills[i][j]}`);
+          }
+        }
+      }
+
+      // Output
+      // - HTML
+      // - JS
+      // - Python
+      // --- Flask
+      // --- Django
+      // - MySQL
+    </script>
+  </body>
+</html>

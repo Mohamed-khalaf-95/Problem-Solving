@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 40-47 Array-Challenge</title>
+  </head>
+  <body>
+    <script>
+      /*
+  Array Challenge
+*/
+
+      let zero = 0;
+
+      let counter = 3;
+
+      let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+      //Write Code Here
+      // Answer One ======================
+      my.pop();
+      my = my.slice(zero).reverse();
+      my.shift();
+      // Answer Two =======================
+      // my.length =  my.length - counter + true;
+      // my.reverse();
+      console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"];
+      // =========================================================
+
+      my = my.slice(++zero, counter);
+      console.log(my); // ["Elham", "Mazero"]
+
+      // ================================================================
+
+      my[my.length - zero] = "Elzero";
+      my = my.slice(true).toString();
+      console.log(my); // "Elzero"
+
+      // =============================================================
+      my =
+        my.slice(++counter, ++counter) +
+        my.slice(counter).toString(my.indexOf("o")).toUpperCase();
+      console.log(my); // "rO"
+    </script>
+  </body>
+</html>

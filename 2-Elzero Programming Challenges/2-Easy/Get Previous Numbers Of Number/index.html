@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Previous Numbers Of Number</title>
+  </head>
+  <body>
+    <script>
+      function get_previous_numbers(num) {
+        let result = [num];
+        if (num <= 0) {
+          return "Negative Numbers & Zero Not Allowed";
+        } else {
+          for (let i = 1; i < num; i++) {
+            if (num <= 10) {
+              result.push(num - i);
+            } else if ((num - i) % 2 !== 0) {
+              continue;
+            } else {
+              result.push(num - i);
+            }
+          }
+        }
+
+        return parseInt(result.join(""));
+      }
+      console.log(get_previous_numbers(0)); //# "Negative Numbers & Zero Not Allowed"
+      console.log(get_previous_numbers(-20)); //# "Negative Numbers & Zero Not Allowed"
+      console.log(get_previous_numbers(10)); //# 10987654321
+      console.log(get_previous_numbers(17)); //# 17161412108642
+
+      //soul 2
+      // function get_previous_numbers(num) {
+      //   let result = [num];
+      //   if (num <= 0) {
+      //     return "Negative Numbers & Zero Not Allowed";
+      //   }
+      //   for (let i = 1; i < num; i++) {
+      //     result.push(num - i);
+      //   }
+      //   if (num > 10) {
+      //     return parseInt(
+      //       result.reduce((acc, e) => (e % 2 === 0 ? `${acc}${e}` : acc))
+      //     );
+      //   } else {
+      //     return parseInt(result.join(""));
+      //   }
+      // }
+      // console.log(get_previous_numbers(0)); //# "Negative Numbers & Zero Not Allowed"
+      // console.log(get_previous_numbers(-20)); //# "Negative Numbers & Zero Not Allowed"
+      // console.log(get_previous_numbers(10)); //# 10987654321
+      // console.log(get_previous_numbers(17)); //# 17161412108642
+    </script>
+  </body>
+</html>

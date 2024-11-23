@@ -1,0 +1,24 @@
+#data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+}
+.content {
+  width: 350px;
+  background-color: #009688;
+  color: white;
+  padding: 15px;
+}
+.content h2 {
+  text-align: center;
+}
+.content p {
+  font-size: 20px;
+}
+.content p:nth-child(2),
+.content h2 {
+  color: #222;
+}

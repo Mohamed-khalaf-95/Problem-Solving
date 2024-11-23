@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leson 71-78 A1</title>
+  </head>
+  <body>
+    <script>
+      let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+      let str = mix
+        .map((el) => (isNaN(parseInt(el)) ? el : ""))
+        .reduce((acc, cru) => `${acc}${cru}`);
+
+      console.log(str);
+
+      // Elzero
+    </script>
+  </body>
+</html>

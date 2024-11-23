@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Negative And Sum Positive And Sort String</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 10, 15, -2, -5, 0, "Z", "A", 8, -30, 5, "C"];
+
+      function getResult(arr) {
+        // Your Code
+        return arr
+          .filter((e) => typeof e === "string")
+          .sort()
+          .join("")
+          .split()
+          .concat(
+            arr.filter((e) => e < 0).length,
+            // .filter((e) =>Math.sign(e)===-1).length
+            //.reduce((acc,e,index,arr) => arr.length)
+            arr
+              .filter((e) => typeof e === "number" && e > 0)
+              .reduce((acc, c) => acc + c)
+          )
+          .reverse();
+      }
+      console.log(getResult(arr));
+      // Ouput
+      //[39, 3, 'ACZ']
+    </script>
+  </body>
+</html>

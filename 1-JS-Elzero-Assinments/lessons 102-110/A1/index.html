@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 102-110 A2</title>
+  </head>
+  <body>
+    <h1
+      id="num"
+      style="
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      Your Numbers Is:
+    </h1>
+    <script>
+      let myPrompt = window.prompt("Print Number From – To", "Example: 5-20");
+      if (myPrompt !== null) {
+        myPrompt = myPrompt.split("-").sort((a, b) => a - b);
+        for (let i = 0; i < myPrompt[myPrompt.length - 1]; i++) {
+          let num = parseInt(myPrompt[0]);
+          let numC = document.createElement("h3");
+          numC.className = "num";
+          numC.style.color = "red";
+          numC.textContent = num += i;
+          document.getElementById("num").appendChild(numC);
+          if (num === Math.floor(myPrompt[myPrompt.length - 1])) {
+            break;
+          }
+        }
+      } else {
+        let msg = document.createElement("h1");
+        msg.textContent = "Please Insert Numbers";
+        document.getElementById("num").appendChild(msg);
+        setTimeout(() => window.location.reload(), 3000);
+      }
+      // soul 2
+      // if (myPrompt !== null) {
+      //   myPrompt = myPrompt.split("-").sort((a, b) => a - b);
+      //   for (let i = Math.floor(myPrompt[0]); i <= Math.floor(myPrompt[myPrompt.length - 1]); i++) {
+      //     document.getElementById("num").append(i," ");
+      //   }
+      //  } else {
+      //   let msg = document.createElement("h1");
+      //   msg.textContent = "Please Insert Numbers";
+      //   document.getElementById("num").appendChild(msg);
+      //   setTimeout(() => window.location.reload(), 3000);
+      // }
+    </script>
+  </body>
+</html>

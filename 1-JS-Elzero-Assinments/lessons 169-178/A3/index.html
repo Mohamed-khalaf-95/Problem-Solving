@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 169-178</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <script>
+      let articalRequest = new XMLHttpRequest();
+      articalRequest.open("get", "./artical.json");
+      articalRequest.send();
+      articalRequest.onload = function () {
+        let artJsonData = this.responseText;
+        let mainData = JSON.parse(this.responseText);
+        if (this.status === 200 && this.readyState === 4) {
+          for (let value in mainData) {
+            mainData[value].department = "All";
+            console.log(mainData[value]);
+          }
+          let updateData = JSON.stringify(mainData);
+          console.log(updateData);
+        }
+      };
+    </script>
+  </body>
+</html>

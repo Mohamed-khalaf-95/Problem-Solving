@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Character From String</title>
+  </head>
+  <body>
+    <script>
+      function remove_char_from(word, c) {
+        return word
+          .split("")
+          .filter(
+            (e, i, arr) =>
+              !arr[i].includes(c) && !arr[i].includes(c.toUpperCase())
+          )
+          .join("");
+      }
+      //# Testing Ouput
+      console.log(remove_char_from("ElddzeroD WebDD ddSchool", "d")); // # Elzero Web School
+      console.log(remove_char_from("ElxzeroX Web Sxchool", "x")); //# Elzero Web School
+      console.log(remove_char_from("Elzero@ Web@@ @@School", "@")); //# Elzero Web School
+    </script>
+  </body>
+</html>

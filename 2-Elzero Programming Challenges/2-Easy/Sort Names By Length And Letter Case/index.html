@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort Names By Length And Letter Case</title>
+  </head>
+  <body>
+    <script>
+      //soul 1
+      function do_sort(names) {
+        return names
+          .filter((e) => e.startsWith("a"))
+          .sort((a, c) => a.length - c.length)
+          .concat(
+            names
+              .filter((e) => e.startsWith("A"))
+              .sort((a, c) => a.length - c.length)
+          );
+      }
+      console.log(
+        do_sort([
+          "Ameer",
+          "alsayed",
+          "Mahmoud",
+          "Ahmed",
+          "ayman",
+          "Israa",
+          "Anas",
+          "amal",
+          "amr",
+          "aml",
+        ])
+      );
+
+      // soul 2
+      function do_sort_two(names) {
+        let filterNames = [];
+        let filterNames2 = [];
+        for (let i = 0; i < names.length; i++) {
+          if (names[i].startsWith("a")) {
+            filterNames.push(names[i]);
+            filterNames.sort((a, b) => a.length - b.length);
+          }
+          if (names[i].startsWith("A")) {
+            filterNames2.push(names[i]);
+            filterNames2.sort((a, b) => a.length - b.length);
+          }
+        }
+
+        return filterNames.concat(filterNames2);
+      }
+      console.log(
+        do_sort_two([
+          "Ameer",
+          "alsayed",
+          "Mahmoud",
+          "Ahmed",
+          "ayman",
+          "Israa",
+          "Anas",
+          "amal",
+          "amr",
+          "aml",
+        ])
+      );
+      //output
+      //['amr', 'aml', 'amal', 'ayman', 'alsayed', 'Anas', 'Ameer', 'Ahmed']
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 147-158 A3-Challange</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <SCRipt>
+        class User {
+            #c;
+            constructor(username, card) {
+                this.u = username;
+                this.#c = card;
+            }
+            get showData() {
+                let re = /\w{4}/ig
+                let data = this.#c.toString().match(re).join("-");
+                return `Hello ${this.u} Your Credit Card Number Is ${data}`
+            }
+            //soul 2
+            /*
+                get showData() {
+                let cardNumber = this.#c.toString().replace(/(\w{4})(\w{4})(\w{4})(\w{4})/, "$1-$2-$3-$4");
+                return `Hello ${this.u} Your Credit Card Number Is ${cardNumber}`
+                }
+            */
+        }
+
+        // Do Not Edit Anything Below
+
+        let userOne = new User("Osama", "1234-5678-1234-5678");
+        let userTwo = new User("Ahmed", "1234567812345678");
+        let userThree = new User("Ghareeb", 1234567812345678);
+
+        console.log(userOne.showData);
+        // Hello Osama Your Credit Card Number Is 1234-5678-1234-5678
+
+        console.log(userTwo.showData);
+        // Hello Ahmed Your Credit Card Number Is 1234-5678-1234-5678
+
+        console.log(userThree.showData);
+        // Hello Ghareeb Your Credit Card Number Is 1234-5678-1234-5678
+
+        console.log(userOne.c); // Prevent Accessing To Card Property Here
+        // Undefined
+
+    </SCRipt>
+</body>
+
+</html>

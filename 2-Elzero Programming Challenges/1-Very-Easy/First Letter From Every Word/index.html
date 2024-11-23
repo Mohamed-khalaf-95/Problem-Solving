@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Letter From Every Word</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      // Input And Test
+      let testword = "Elzero Web School";
+
+      function getFirstLetters(testword) {
+        testword = testword.split(" ");
+        let result = "";
+        for (let i = 0; i < testword.length; i++) {
+          if (testword.length !== 1 && testword.length <= 3) {
+            result += testword[i].slice(0, 1).toUpperCase();
+          } else if (testword.length > 3) {
+            result = "The Word Is Big";
+          } else {
+            result = testword.join("");
+          }
+        }
+
+        return result;
+      }
+      console.log(getFirstLetters(testword)); // "EWS"
+      // Other Tests
+      console.log(getFirstLetters("Osama")); // "Osama"
+      console.log(getFirstLetters("Osama Elzero")); // "OE"
+      console.log(getFirstLetters("I Love PHP And Python")); // "The Word Is Big"
+
+      //soul 2
+
+      // Input And Test
+      // let testword = "Elzero Web School";
+
+      // function getFirstLetters(testword) {
+      //   let final = "";
+      //   let result = testword
+      //     .split(" ")
+      //     .map((el, index, arr) =>
+      //       arr.length > 3
+      //         ? (final = "The Word Is Big")
+      //         : arr.length > 1 && arr.length <= 3
+      //         ? (final += el[0].toUpperCase())
+      //         : (final = el)
+      //     )
+      //     .join(" ");
+
+      //   return final;
+      // }
+      // console.log(getFirstLetters(testword)); // "EWS"
+      // // Other Tests
+      // console.log(getFirstLetters("Osama")); // "Osama"
+      // console.log(getFirstLetters("Osama Elzero")); // "OE"
+      // console.log(getFirstLetters("I Love PHP And Python")); //
+    </script>
+  </body>
+</html>

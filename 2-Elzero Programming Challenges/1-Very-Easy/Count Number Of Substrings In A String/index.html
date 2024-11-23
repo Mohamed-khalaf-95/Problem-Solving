@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Number Of Substrings In A String</title>
+  </head>
+  <body>
+    <script>
+      function count_sub_strings(sub, string) {
+        let result = 0;
+        for (let i = 0; i < string.length; i++) {
+          if (string[i].toUpperCase() === sub.toUpperCase()) {
+            result += string[i].length;
+          }
+        }
+        return result;
+      }
+
+      console.log(count_sub_strings("o", "I Love Elzero Web School")); // 4
+      console.log(count_sub_strings("a", "Iam Happy")); // 2
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Duplicate Words</title>
+  </head>
+  <body>
+    <script>
+      function remove_duplicate_words_from(sentence) {
+        return sentence
+          .split(" ")
+          .filter((e, i, a) => a.indexOf(e) === i)
+          .join(" ");
+      }
+
+      //# Testing Ouput
+      console.log(
+        remove_duplicate_words_from("Hello Elzero Web Web Hello School")
+      );
+      //# Hello Elzero Web School
+      //========soul 2
+      function remove_duplicate_words_from_two(sentence) {
+        sentence = sentence.split(" ");
+        let result = "";
+        for (let i = 0; i < sentence.length; i++) {
+          if (result.includes(sentence[i])) continue;
+          result += sentence[i] + " ";
+        }
+        return result;
+      }
+
+      //# Testing Ouput
+      console.log(
+        remove_duplicate_words_from_two("Hello Elzero Web Web Hello School")
+      );
+      //# Hello Elzero Web School
+    </script>
+  </body>
+</html>

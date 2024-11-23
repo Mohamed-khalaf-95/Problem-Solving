@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 57-63 A3</title>
+  </head>
+  <body>
+    <script>
+      function ageInTime(theAge) {
+        let years = `Years = ${theAge}`;
+        let months = `Months = ${theAge * 12}`;
+        let days = `Days = ${theAge * 12 * 30}`;
+        let hours = `Hours = ${theAge * 12 * 30 * 24}`;
+        let minuts = `Minuts = ${theAge * 12 * 30 * 24 * 60}`;
+        let seconds = `Seconds = ${theAge * 12 * 30 * 24 * 60 * 60}`;
+        let arrResult = [years, months, days, hours, minuts, seconds];
+        // let result = `${years}\n${months}\n${days}\n${hours}\n${minuts}\n${seconds}`;
+        for (let i = 0; i < arrResult.length; i++) {
+          if (theAge < 10 || theAge > 100) {
+            console.log("Age Out Of Range");
+            break;
+          } else {
+            console.log(`${arrResult[i]}`);
+          }
+        }
+      }
+
+      // Needed Output
+      ageInTime(110); // Age Out Of Range
+      ageInTime(38); // Months Example => 456 Months
+    </script>
+  </body>
+</html>

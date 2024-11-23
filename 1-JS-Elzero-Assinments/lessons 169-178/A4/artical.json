@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Mohamed",
+    "department": "Action",
+    "articalTitle": "Italin Job",
+    "Artical Content": "Lorem ducimus placeat enim rem harum velit illo fugit tempora officiis unde, doloribus quam illum nemo! Ducimus quidem iste pariatur vel repudiandae."
+  },
+  {
+    "id": 2,
+    "name": "Ahmed",
+    "department": "News",
+    "articalTitle": "Plastin News",
+    "Artical Content": "Lorem ducimus placeat enim rem harum velit illo fugit tempora officiis unde, doloribus quam illum nemo! Ducimus quidem iste pariatur vel repudiandae."
+  },
+  {
+    "id": 3,
+    "name": "Mahmoud",
+    "department": "Crime",
+    "articalTitle": "Murder On The Oriant Express",
+    "Artical Content": "Lorem ducimus placeat enim rem harum velit illo fugit tempora officiis unde, doloribus quam illum nemo! Ducimus quidem iste pariatur vel repudiandae."
+  },
+  {
+    "id": 4,
+    "name": "Eslam",
+    "department": "Love Story",
+    "articalTitle": "Titanc",
+    "Artical Content": "Lorem ducimus placeat enim rem harum velit illo fugit tempora officiis unde, doloribus quam illum nemo! Ducimus quidem iste pariatur vel repudiandae."
+  },
+  {
+    "id": 5,
+    "name": "Esraa",
+    "department": "Horor",
+    "articalTitle": "Nun",
+    "Artical Content": "Lorem ducimus placeat enim rem harum velit illo fugit tempora officiis unde, doloribus quam illum nemo! Ducimus quidem iste pariatur vel repudiandae."
+  }
+]

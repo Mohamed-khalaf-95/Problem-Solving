@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find English Letter Position</title>
+  </head>
+  <body>
+    <script>
+      //Soul 1
+      function letterPosition(letter) {
+        letter = letter.toUpperCase().charCodeAt() - 64;
+        return letter;
+      }
+      console.log(letterPosition("z"));
+      //soul 2
+      let letters = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+      ];
+      function letterPositionTwo(letter){
+        for(let i = 0; i < letters.length; i++){
+         if(letter === letters[i]){
+          return i+1
+         }
+        }
+      }
+console.log(letterPositionTwo("z"))
+    </script>
+  </body>
+</html>

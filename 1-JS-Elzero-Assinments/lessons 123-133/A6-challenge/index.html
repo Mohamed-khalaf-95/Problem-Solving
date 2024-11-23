@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 123-133 A6-Challenge</title>
+  </head>
+  <body>
+    <script>
+      let chars = ["A", "B", "C", 20, "D", "E", 10, 15, 6];
+      // chars.sort().sort((a, b) => a - b);
+      let numArr = [];
+      for (let i = 0; i < chars.length; i++) {
+        if (typeof chars[i] === "number") {
+          numArr.push(chars[i]);
+          chars.unshift(...chars.splice(i, 1));
+        }
+      }
+      chars.copyWithin(0, numArr.length, numArr.length * 2);
+      console.log(chars);
+      // Needed Output
+      // ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E']
+      // Needed Output
+      // ["Z", "Y", "Z", "Y", "A", "D", "E"]
+      // =========Soul 2 =======================
+      let charsTwo = ["Z", "Y", "A", "D", "E", 10, 1];
+      for (let i = 0; i < charsTwo.length; i++) {
+        if (typeof charsTwo[i] === "number")
+          charsTwo.unshift(...charsTwo.splice(i, 1));
+      }
+      let firstPostion = charsTwo.findIndex((e) => typeof e === "string");
+      charsTwo.copyWithin(0, firstPostion, firstPostion * 2);
+      console.log(charsTwo);
+      // Needed Output
+      // ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E']
+      // Needed Output
+      // ["Z", "Y", "Z", "Y", "A", "D", "E"]
+    </script>
+  </body>
+</html>

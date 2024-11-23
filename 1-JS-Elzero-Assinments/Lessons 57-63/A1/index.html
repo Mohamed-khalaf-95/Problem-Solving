@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 57-63 A1</title>
+  </head>
+  <body>
+    <script>
+      function sayHello(theName, theGender) {
+        theGender === "Male"
+          ? console.log(`Hello Mr ${theName}`)
+          : theGender === "Female"
+          ? console.log(`Hello Miss ${theName}`)
+          : console.log(`Hello ${theName}`);
+      }
+
+      // Needed Output
+      sayHello("Osama", "Male"); // "Hello Mr Osama"
+      sayHello("Eman", "Female"); // "Hello Miss Eman"
+      sayHello("Sameh"); // "Hello Sameh"
+      sayHello("Khalaf", "Male"); // "Hello Khalaf"
+    </script>
+  </body>
+</html>

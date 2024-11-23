@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lessons 111-114 A2</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 17px;
+      }
+      body {
+        padding: 10px;
+      }
+      body > div {
+        padding: 15px;
+        width: 330px;
+        margin: 50px auto 10px;
+        box-shadow: 0 0 10px #9ebaf36e;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+      }
+      body > div > div {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        width: 90%;
+        margin: 0 auto 15px;
+      }
+
+      input,
+      select {
+        padding: 10px;
+        display: block;
+        width: 90%;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: #9ebaf34b;
+        margin: 0 auto 15px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
+      .submit {
+        cursor: pointer;
+        width: 130px;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        background-color: white;
+        box-shadow: 0 0 10px #9ebaf3b4;
+        color: #4a86ff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form">
+      <form>
+        <div>
+          <label for="user">User Name</label>
+          <input type="text" name="user" class="user" id="user" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" class="email" id="email" />
+        </div>
+        <div>
+          <label for="age">Age</label>
+          <input type="text" name="age" class="age" id="age" />
+        </div>
+        <div>
+          <label for="track">Selecte Track</label>
+          <select name="track" id="track">
+            <option value="Front-End Development">Front-End Development</option>
+            <option value="Back-End Development">Back-End Development</option>
+            <option value="Desktop Development">Desktop Development</option>
+            <option value="Android Development">Android Development</option>
+            <option value="IOS Development">IOS Development</option>
+          </select>
+        </div>
+        <input type="submit" value="Submit" class="submit" />
+      </form>
+    </div>
+    <script>
+      let user = document.getElementById("user");
+      let mail = document.getElementById("email");
+      let age = document.getElementById("age");
+      let track = document.getElementById("track");
+      let submit = document.querySelector(".submit");
+      getDataFromSessionStr();
+      document.forms[0].addEventListener("input", addDataToSessionStr);
+      function addDataToSessionStr() {
+        window.sessionStorage.setItem("user", `${user.value}`);
+        window.sessionStorage.setItem("email", `${mail.value}`);
+        window.sessionStorage.setItem("age", `${age.value}`);
+        window.sessionStorage.setItem("track", `${track.value}`);
+      }
+      function getDataFromSessionStr() {
+        if (
+          sessionStorage["user"] ||
+          sessionStorage["email"] ||
+          sessionStorage["age"] ||
+          sessionStorage["track"]
+        ) {
+          user.value = sessionStorage["user"];
+          mail.value = sessionStorage["email"];
+          age.value = sessionStorage["age"];
+          track.value = sessionStorage["track"];
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leson 48-53 A2</title>
+  </head>
+  <body>
+    <script>
+      let start = 10;
+      let end = 0;
+      let stop = 3;
+
+      for (let i = start; i >= end; i--) {
+        if (i < stop) {
+          break;
+        }
+        if (i < start) {
+          i = "0" + i;
+        }
+        console.log(i);
+      }
+
+      // Output
+      // 10
+      // 09
+      // 08
+      // 07
+      // 06
+      // 05
+      // 04
+      // 03
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Characters Location</title>
+  </head>
+  <body>
+    <script>
+      function word_to_nums(word) {
+        console.log(
+          word
+            .split("")
+            .map((e) => e.toUpperCase().charCodeAt() - 64)
+            .join(" ")
+        );
+      }
+      //# Tests
+      word_to_nums("Elzero"); //# "5 12 26 5 18 15"
+      //============soul 2
+      function wordToNums(word) {
+        let answer = "";
+        for (let i = 0; i < word.length; i++) {
+          answer += word[i].toUpperCase().charCodeAt() - 64 + " ";
+        }
+        return answer;
+      }
+
+      console.log(wordToNums("Elzero"));
+    </script>
+  </body>
+</html>

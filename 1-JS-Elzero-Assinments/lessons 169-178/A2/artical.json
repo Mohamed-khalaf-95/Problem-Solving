@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Mohamed",
+    "department": "Action",
+    "articalTitle": "Italin Job",
+    "Artical Content": "Italin Job Ation Movie"
+  },
+  {
+    "id": 2,
+    "name": "Ahmed",
+    "department": "News",
+    "articalTitle": "Plastin News",
+   "Artical Content": "Save Our Brothers In Plastin"
+  },
+  {
+    "id": 3,
+    "name": "Mahmoud",
+    "department": "Crime",
+    "articalTitle": "Murder On The Oriant Express",
+    "Artical Content": "Murder On The Oriant Express it's Crime Movie"
+  },
+  {
+    "id": 4,
+    "name": "Eslam",
+    "department": "Love Story",
+    "articalTitle": "Titanc",
+    "Artical Content": "Titanc Love story"
+  },
+  {
+    "id": 5,
+    "name": "Esraa",
+    "department": "Horor",
+    "articalTitle": "Nun",
+    "Artical Content": "Nun Horor Movie"
+  }
+]

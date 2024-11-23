@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add_commas_and_underscore</title>
+  </head>
+  <body>
+    <script>
+      // قم بعمل Function بإسم add_commas_and_underscore تقبل Parameter واحد وهو الرقم
+      // إذا كان الرقم مكون من 7 أو 8 أو 9 أرقام تقوم بوضع Underscore بعد ثالث رقم من اليمين و Comma بعد سادس رقم من اليمين
+      // إذا كان الرقم مكون من 4 أو 5 أو 6 أرقام تقوم بوضع Underscore بعد ثالث رقم من اليمين
+      // إذا كان الرقم مكون من 3 أرقام لا تقوم بوضع أي شيء
+      "use strict";
+      function add_commas_and_underscore(x) {
+        x = x.toLocaleString().split("");
+        x[x.length - 4] = "_";
+        return x.join("");
+      }
+      console.log(add_commas_and_underscore(123));
+      console.log(add_commas_and_underscore(1234));
+      console.log(add_commas_and_underscore(123456));
+      console.log(add_commas_and_underscore(1234567));
+      console.log(add_commas_and_underscore(1234567890));
+
+      //soul-2
+    //   function add_commas_and_underscore(x) {
+    //     x = x.toString().split("");
+    //     if(x.length >= 4 && x.length <= 6){
+    //       x[x.length - 4] += "_";
+    //     }else if(x.length > 6 && x.length <= 8){
+    //       x[x.length - 4] += ",";
+    //       x[x.length - 7] += "_";
+
+    //     }else if(x.length > 8 && x.length <= 10){
+    //       x[x.length - 4] += ",";
+    //       x[x.length - 7] += ",";
+    //       x[x.length - 10] += "_";
+    //     }else{
+    //       x[x.length - 4] += ",";
+    //       x[x.length - 7] += ",";
+    //       x[x.length - 10] += "_";
+    //     }
+    //     return x.join("");
+    //   }
+      //soul3
+    //   function add_commas_and_underscore(x) {
+    //     let num = x.toString();
+    //     let result = "";
+    //     let sep = "_";
+    //     let i = num.length - 3;
+    //     for (; i > 0; i -= 3) {
+    //       if (sep === "_") {
+    //         result = sep + num.slice(i, i + 3) + result;
+    //         sep = ",";
+    //       } else result = sep + num.slice(i, i + 3) + result;
+    //     }
+    //     return num.slice(0, i + 3) + result;
+    //   }
+    </script>
+  </body>
+</html>
